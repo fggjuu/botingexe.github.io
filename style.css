@@ -1,0 +1,302 @@
+                /* styles.css */
+                /* Общие стили */
+                
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    background-color: #f4f4f4;
+                }
+                /* Шапка */
+                
+                header {
+                    background-color: #333;
+                    color: #fff;
+                    padding: 10px 20px;
+                }
+                
+                nav ul {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                    justify-content: center;
+                }
+                
+                nav li {
+                    margin: 0 10px;
+                }
+                
+                nav a {
+                    color: #fff;
+                    text-decoration: none;
+                }
+                /* Герой-секция */
+                
+                .hero {
+                    position: relative;
+                    height: 600px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: hidden;
+                }
+                
+                .hero-content {
+                    position: relative;
+                    z-index: 1;
+                    text-align: center;
+                    color: #fff;
+                    padding: 0 20px;
+                }
+                
+                .hero h1 {
+                    font-size: 48px;
+                    margin-bottom: 20px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                }
+                
+                .hero p {
+                    font-size: 24px;
+                    margin-bottom: 40px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                }
+                
+                .hero-background {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(135deg, #cbcdcf, #b9d8dd, #bbddd9);
+                    z-index: 0;
+                    animation: background-animation 20s ease infinite;
+                }
+                
+                .animated-shapes {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                }
+                
+                .shape {
+                    position: absolute;
+                    width: 100px;
+                    height: 100px;
+                    background-color: rgba(255, 255, 255, 0.3);
+                    border-radius: 50%;
+                    animation: shape-animation 10s infinite linear;
+                }
+                
+                .shape-1 {
+                    top: 10%;
+                    left: 20%;
+                    animation-delay: 0s;
+                }
+                
+                .shape-2 {
+                    top: 30%;
+                    left: 50%;
+                    animation-delay: 2s;
+                }
+                
+                .shape-3 {
+                    top: 60%;
+                    left: 80%;
+                    animation-delay: 4s;
+                }
+                
+                .shape-4 {
+                    top: 80%;
+                    left: 10%;
+                    animation-delay: 6s;
+                }
+                
+                .shape-5 {
+                    top: 40%;
+                    left: 30%;
+                    animation-delay: 8s;
+                }
+                
+                .shape-6 {
+                    top: 70%;
+                    left: 60%;
+                    animation-delay: 10s;
+                    animation: rotate-animation 15s infinite linear;
+                }
+                
+                @keyframes shape-animation {
+                    0% {
+                        transform: scale(1) translate(0, 0);
+                    }
+                    50% {
+                        transform: scale(0.5) translate(50%, 30%);
+                    }
+                    100% {
+                        transform: scale(1) translate(0, 0);
+                    }
+                }
+                
+                @keyframes rotate-animation {
+                    0% {
+                        transform: rotate(0deg);
+                    }
+                    100% {
+                        transform: rotate(360deg);
+                    }
+                }
+                
+                @keyframes background-animation {
+                    0% {
+                        background-position: 0% 50%;
+                    }
+                    50% {
+                        background-position: 100% 50%;
+                    }
+                    100% {
+                        background-position: 0% 50%;
+                    }
+                }
+                
+                .btn {
+                    display: inline-block;
+                    background-color: #fff;
+                    color: #007bff;
+                    padding: 12px 24px;
+                    text-decoration: none;
+                    border-radius: 5px;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                    transition: transform 0.3s ease;
+                }
+                
+                .btn:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+                }
+                /* О боте */
+                
+                .about {
+                    padding: 80px 20px;
+                    background-color: #fff;
+                    text-align: center;
+                }
+                
+                .about h2 {
+                    font-size: 36px;
+                    margin-bottom: 20px;
+                }
+                
+                .about p {
+                    font-size: 18px;
+                    max-width: 800px;
+                    margin: 0 auto;
+                }
+                /* Возможности */
+                
+                .features {
+                    padding: 80px 20px;
+                    background-color: #f4f4f4;
+                }
+                
+                .features h2 {
+                    text-align: center;
+                    margin-bottom: 40px;
+                    font-size: 36px;
+                }
+                
+                .feature-list {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-gap: 40px;
+                }
+                
+                .feature {
+                    background-color: #fff;
+                    padding: 30px;
+                    border-radius: 5px;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                    text-align: center;
+                    transition: transform 0.3s ease;
+                }
+                
+                .feature:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+                }
+                
+                .feature-icon {
+                    font-size: 36px;
+                    color: #007bff;
+                    margin-bottom: 20px;
+                }
+                
+                .feature h3 {
+                    font-size: 24px;
+                    margin-bottom: 10px;
+                }
+                
+                .feature p {
+                    font-size: 16px;
+                }
+                /* Связаться с нами */
+                
+                .contact {
+                    padding: 80px 20px;
+                    background-image: linear-gradient(to right, #007bff, #00b8d4);
+                    color: #fff;
+                }
+                
+                .contact h2 {
+                    text-align: center;
+                    margin-bottom: 40px;
+                    font-size: 36px;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                }
+                
+                .contact form {
+                    max-width: 500px;
+                    margin: 0 auto;
+                }
+                
+                .contact input,
+                .contact textarea {
+                    width: 100%;
+                    padding: 12px;
+                    margin-bottom: 20px;
+                    border: none;
+                    border-radius: 5px;
+                    background-color: rgba(255, 255, 255, 0.8);
+                    color: #333;
+                }
+                
+                .contact textarea {
+                    height: 150px;
+                }
+                
+                .contact button {
+                    background-color: #fff;
+                    color: #007bff;
+                    padding: 12px 24px;
+                    border: none;
+                    border-radius: 5px;
+                    font-size: 16px;
+                    cursor: pointer;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                    transition: transform 0.3s ease;
+                }
+                
+                .contact button:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+                }
+                /* Футер */
+                
+                footer {
+                    background-color: #333;
+                    color: #fff;
+                    padding: 20px;
+                    text-align: center;
+                }
